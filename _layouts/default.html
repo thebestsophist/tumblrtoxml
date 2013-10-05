@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<posts>
-	{{ content }}
-</posts>
+<export>
+	<meta>
+		<blog-title>{{ page.title }}</blog-title>
+		<base-url>{{ page.base-url }}</base-url>
+	</meta>
+
+	<posts>
+{{ content }}
+	</posts>
+
+</export>

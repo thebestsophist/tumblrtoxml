@@ -1,11 +1,13 @@
 ---
 layout: default
+title: "fork on the left"
+base-url: "forkontheleft.tumblr.com"
 ---
 
 {% for post in site.posts %}
 	<post>
 		<title>{{ post.title }}</title>
-		<id>{{ post.id }}</id>
+		<id>{{ post.tumblrid }}</id>
 		<slug>{{ post.slug }}</slug>
 		<date>{{ post.date }}</date>
 		<tags>{{ post.tags }}</tags>
@@ -13,7 +15,9 @@ layout: default
 		<state>{{ post.state }}</state>
 		<format>{{ post.format }}</format>
 		<content>
+		<![CDATA[
 			{{ post.content }}
+		]]>
 		</content>
 	</post>
 {% endfor %}
