@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+	<post>
+		<title>{{ post.title }}</title>
+		<id>{{ post.id }}</id>
+		<slug>{{ post.slug }}</slug>
+		<date>{{ post.date }}</date>
+		<tags>{{ post.tags }}</tags>
+		<type>{{ post.type }}</type>
+		<state>{{ post.state }}</state>
+		<format>{{ post.format }}</format>
+		<content>
+			{{ post.content }}
+		</content>
+	</post>
+{% endfor %}
