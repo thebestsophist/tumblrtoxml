@@ -17,6 +17,9 @@ This takes a Tumblr archive generated with [tumblr-rb](https://github.com/mwunsc
 
 		`$ TUMBLRHOST=yourbloghere.tumblr.com tumblr backup _posts/`
 
+
+1. Update the yaml front matter in `index.xsl` with your blog details.
+
 1. Enter the `_posts` directory and rename the archived posts to something jekyll will like:
 
 		`$ find *.txt -exec bash -c 'mv "$0" "2013-10-05-${0%\.txt}.markdown"' {} \;`
@@ -35,4 +38,5 @@ Jekyll will still build individual pages for your posts, you can ignore those, t
 
 
 ## Notes
-Since Tumblr is terrible at generating clean XHTML, post contents are shoved into a `<![CDATA[]>`. You may need to clean up the data a little more if you plan on using it to generate your sites.
+- Since Tumblr is terrible at generating clean XHTML, post contents are shoved into a `<![CDATA[]>`. You may need to clean up the data a little more if you plan on using it to generate your sites.
+- Since XML is more strict with special characters, you may have to go through and clean your ampersands, smart quotes and such.
