@@ -1,12 +1,12 @@
 # Tumblr to xml
 
-This takes a Tumblr archive generated with [tumblr-rb](https://github.com/mwunsch/tumblr), and turns it into a single XML file. 
+This takes a Tumblr archive generated with [tumblr-rb](https://github.com/mwunsch/tumblr), and turns it into a single XML file using Jekyll.
 
 ## Requirements
 
 - Rubygems
 - [tumblr-rb](https://github.com/mwunsch/tumblr)
-
+- [Jekyll](http://jekyllrb.com)
 
 ## Instructions
 1. If you have not done so, install `tumblr-rb` with the command `gem install tumblr-rb`
@@ -28,13 +28,15 @@ You can replace the date `2013-10-05` with any date you prefer, jekyll requires 
 
 1. Mass replace `id: ` with `tumblrid: `
 
-[Need good command for this that only matches the `id:` in the yaml front matter.]
+[Need a good command for this that only matches the `id:` in the yaml front matter, I currently just use a mass-repace app.]
+
+1. Edit the YAML front matter in `archive.xml` to match your site.
 
 1. Return to your jekyll root and build the xml file:
 
 		`jekyll build`
 		
-Jekyll will still build individual pages for your posts, you can ignore those, the important file is `index.xml` which will contain your entire 
+Jekyll will still build individual pages for your posts, you can ignore those, the important file is `_site/archive.xml` which will be a single XML.
 
 
 ## Notes
