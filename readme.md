@@ -13,6 +13,8 @@ This takes a Tumblr archive generated with [tumblr-rb](https://github.com/mwunsc
 
 1. Clone this repo:
 
+		`git clone https://github.com/thebestsophist/tumblrtoxml.git`
+
 1. Enter the directory and download your tumblr archive to `_posts`
 
 		`$ TUMBLRHOST=yourbloghere.tumblr.com tumblr backup _posts/`
