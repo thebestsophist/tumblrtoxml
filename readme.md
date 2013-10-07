@@ -13,18 +13,18 @@ This takes a Tumblr archive generated with [tumblr-rb](https://github.com/mwunsc
 
 1. Clone this repo:
 
-		`git clone https://github.com/thebestsophist/tumblrtoxml.git`
+		git clone https://github.com/thebestsophist/tumblrtoxml.git
 
 1. Enter the directory and download your tumblr archive to `_posts`
 
-		`$ TUMBLRHOST=yourbloghere.tumblr.com tumblr backup _posts/`
+		$ TUMBLRHOST=yourbloghere.tumblr.com tumblr backup _posts/
 
 
 1. Update the yaml front matter in `index.xsl` with your blog details.
 
 1. Enter the `_posts` directory and rename the archived posts to something jekyll will like:
 
-		`$ find *.txt -exec bash -c 'mv "$0" "2013-10-05-${0%\.txt}.markdown"' {} \;`
+		$ find *.txt -exec bash -c 'mv "$0" "2013-10-05-${0%\.txt}.markdown"' {} \;
 
 You can replace the date `2013-10-05` with any date you prefer, jekyll requires it, but it is not used in the generated XML file. I prefer to use the date of import.
 
@@ -36,7 +36,7 @@ You can replace the date `2013-10-05` with any date you prefer, jekyll requires 
 
 1. Return to your jekyll root and build the xml file:
 
-		`jekyll build`
+		$ jekyll build
 		
 Jekyll will still build individual pages for your posts, you can ignore those, the important file is `_site/archive.xml` which will be a single XML.
 
